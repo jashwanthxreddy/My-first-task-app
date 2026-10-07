@@ -1,16 +1,16 @@
 # Taskflow
 
-Offline-ready task manager PWA. Black, blue-green and violet liquid-glass UI. Tasks are saved on your device.
+Offline-ready task manager PWA (black, blue-green, violet liquid-glass UI).
 
 ## Deploy with GitHub Pages
-1. Create a new repository on GitHub and upload all files from this folder (keep the `icons` folder).
-2. Go to **Settings > Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then **Save**.
-4. After a minute your app is live at `https://<your-username>.github.io/<repo-name>/`.
-5. Open that link on your phone and use **Add to Home Screen** (or the in-app **Install app** button on Chrome/Edge).
+1. Create a GitHub repository and upload ALL files from this folder (including the `icons` folder and `.nojekyll`).
+2. Settings > Pages > Deploy from a branch > `main` and `/ (root)` > Save.
+3. Wait 1-2 minutes, then open `https://<username>.github.io/<repo>/` (it must be this https link, not a file on your phone).
+4. Android Chrome: tap **Install app** in the app, or menu (⋮) > Install app. iPhone: Safari > Share > Add to Home Screen.
 
-## Files
-- `index.html` - the whole app (HTML, CSS, JS)
-- `manifest.webmanifest` - install details
-- `sw.js` - offline cache (change `CACHE` version when you update the app)
-- `icons/` - app icons
+## Your data
+- Saved on-device (localStorage + IndexedDB) and works fully offline.
+- Uninstalling an app makes the browser/phone delete its stored data. To keep your tasks, tap **Save backup** (save the file to Google Drive, Files, or email it to yourself). After reinstalling, tap **Restore** and pick that file.
+
+## Updating
+Change `taskflow-v2` to `taskflow-v3` in `sw.js` whenever you change the app.
